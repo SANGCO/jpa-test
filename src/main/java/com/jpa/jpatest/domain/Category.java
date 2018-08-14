@@ -17,10 +17,10 @@ public class Category {
     private String name;
 
     @ManyToMany
-//    @JoinTable(name = "CATEGORY_ITEM",
-//            joinColumns = @JoinColumn(name = "CATEGORY_ID"),
-//            inverseJoinColumns = @JoinColumn(name = "ITEM_ID"))
-    private List<Item> items = new ArrayList<Item>();
+    @JoinTable(name = "CATEGORY_ITEM",
+            joinColumns = @JoinColumn(name = "CATEGORY_ID"),
+            inverseJoinColumns = @JoinColumn(name = "ITEM_ID"))
+    private List<Item> items = new ArrayList<>();
 
     // 카테고리의 계층 구조를 위한 필드들
     @ManyToOne

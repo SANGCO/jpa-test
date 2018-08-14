@@ -20,7 +20,7 @@ public class Item {
     private int stockQuantity;  //재고수량
 
     @ManyToMany(mappedBy = "items", fetch = FetchType.EAGER)                         //**
-    private List<Category> categories = new ArrayList<Category>(); //**
+    private List<Category> categories = new ArrayList<>(); //**
 
     //Getter, Setter
     public Long getId() {
